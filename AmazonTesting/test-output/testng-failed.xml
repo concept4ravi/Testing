@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="SignIn(failed)">
+    <parameter name="dataProviderFileLocation" value="/home/intern/eclipse-workspace/AmazonTesting/src/LoginTestData.xlsx"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="sheetNum" value="Sheet1"/>
+    <classes>
+      <class name="SignInTest">
+        <methods>
+          <include name="setBrowser"/>
+          <include name="signIn"/>
+        </methods>
+      </class> <!-- SignInTest -->
+    </classes>
+  </test> <!-- SignIn(failed) -->
+</suite> <!-- Failed suite [Suite] -->
