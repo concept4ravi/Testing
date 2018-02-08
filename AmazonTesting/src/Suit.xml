@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" name="Suite" verbose="2" parallel="tests">
+	<test name="SignIn">
+
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="RequiredData"></class>
+			<class name="SignInTest" />
+		</classes>
+	</test>
+	<test name="EmptyCart">
+
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="RequiredData"></class>
+			<class name="emptyCart" />
+		</classes>
+	</test>
+
+
+	<!-- Test -->
+</suite> <!-- Suite -->
