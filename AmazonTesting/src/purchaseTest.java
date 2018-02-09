@@ -29,66 +29,20 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class purchaseTest {
-	WebDriver driver;
-	protected final String baseUrl = "https://www.amazon.in";
-	public FileInputStream xlsxFile = null;
-	public Workbook wb = null;
-	public String filename = "/home/intern/eclipse-workspace/AmazonTesting/src/LoginTestData.xlsx";
+public class purchaseTest extends RequiredData{
+	private WebDriver driver;
+	
 	public String Pwindow ;
 	Boolean flag;
-	@DataProvider(name = "Login")
-	public Object[][] credentials() {
-		try {
-			xlsxFile = new FileInputStream(filename);
-			wb = new XSSFWorkbook(xlsxFile);
-		}catch(FileNotFoundException e) {
-			System.out.println("File Not Found");
-		}
-		catch(IOException e) {
-			System.out.println("Input Output");
-		}
-
-
-		XSSFSheet sheet = (XSSFSheet) wb.getSheet("Sheet1");
-
-		int i=0,j,maxRow=sheet.getLastRowNum();
-
-		XSSFRow row;
-		XSSFCell cell;
-		Iterator<Row> rows = sheet.rowIterator();
-
-		Object[][] obj = new Object[maxRow][2];
-		rows = sheet.rowIterator();
-		rows.next();
-		while(rows.hasNext()) {
-			j=0;
-			row = (XSSFRow) rows.next();
-			Iterator<Cell> cells = row.cellIterator();
-			while(cells.hasNext()) {
-				cell = (XSSFCell) cells.next();
-				obj[i][j++] = cell.getStringCellValue();
-
-			}
-			++i;
-		}
-
-		try {
-			xlsxFile.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return obj;
-
-	}  
+	
 	@BeforeTest
 	@Parameters({"browser"})
 	public void setBrowser(String browser) {
 		if(browser.equals("firefox")) {
-			System.setProperty("webdriver.gecko.driver","/home/intern/eclipse-workspace/AmazonTesting/Browser Driver/geckodriver"); 
+			System.setProperty("webdriver.gecko.driver",firefoxDriverLocation); 
 			driver = new FirefoxDriver();
 		}else if(browser.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver","/home/intern/eclipse-workspace/AmazonTesting/Browser Driver/chromedriver");
+			System.setProperty("webdriver.chrome.driver",chromeDriverLocation);
 			driver = new ChromeDriver();
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

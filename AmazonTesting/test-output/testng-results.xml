@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="607" started-at="2018-02-07T09:22:09Z" finished-at="2018-02-07T09:22:09Z">
+  <suite name="Suite" duration-ms="7979" started-at="2018-02-09T04:44:32Z" finished-at="2018-02-09T04:44:40Z">
     <groups>
     </groups>
-    <test name="SignIn" duration-ms="607" started-at="2018-02-07T09:22:09Z" finished-at="2018-02-07T09:22:09Z">
+    <test name="SignIn" duration-ms="7979" started-at="2018-02-09T04:44:32Z" finished-at="2018-02-09T04:44:40Z">
       <class name="SignInTest">
-        <test-method status="PASS" signature="setBrowser(java.lang.String)[pri:0, instance:SignInTest@7a765367]" name="setBrowser" is-config="true" duration-ms="595" started-at="2018-02-07T14:52:09Z" finished-at="2018-02-07T14:52:09Z">
+        <test-method status="PASS" signature="setBrowser(java.lang.String)[pri:0, instance:SignInTest@76b0bfab]" name="setBrowser" is-config="true" duration-ms="567" started-at="2018-02-09T10:14:32Z" finished-at="2018-02-09T10:14:33Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method status="FAIL" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:SignInTest@7a765367]" name="signIn" duration-ms="0" started-at="2018-02-07T14:52:09Z" data-provider="Login" finished-at="2018-02-07T14:52:09Z">
-          <exception class="org.testng.TestNGException">
+        <test-method status="FAIL" signature="signIn(java.lang.String, java.lang.String)[pri:0, instance:SignInTest@76b0bfab]" name="signIn" duration-ms="7112" started-at="2018-02-09T10:14:33Z" data-provider="Login" finished-at="2018-02-09T10:14:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[3006ravikumar@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[54252gohangoku]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Some DataProvider public java.lang.Object[][] SignInTest.credentials(java.lang.String) parameters unresolved:  at 0 type class java.lang.String]]>
+              <![CDATA[Email id field not available expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: Some DataProvider public java.lang.Object[][] SignInTest.credentials(java.lang.String) parameters unresolved:  at 0 type class java.lang.Stringat org.testng.internal.MethodInvocationHelper.getParameters(MethodInvocationHelper.java:197)at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:130)at org.testng.internal.Parameters.handleParameters(Parameters.java:706)at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:914)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+              <![CDATA[java.lang.AssertionError: Email id field not available expected [true] but found [false]at org.testng.Assert.fail(Assert.java:96)at org.testng.Assert.failNotEquals(Assert.java:776)at org.testng.Assert.assertTrue(Assert.java:44)at SignInTest.signIn(SignInTest.java:72)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.lang.reflect.Method.invoke(Method.java:498)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
